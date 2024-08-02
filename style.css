@@ -1,0 +1,67 @@
+*, :before, :after {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* @media (max-width: 620px) {
+    * {
+        font-size: 12px;
+    }
+} */
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    box-sizing: content-box;
+    background-color: white;
+    margin-right: 4rem;
+    width: 8rem;
+    height: 28rem;
+    border-radius: 5rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+nav #current-color{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%; 
+    border: 4px solid #0000001a;
+}
+
+
+#drawing-board {
+    box-sizing: content-box;
+    background-color: #eee;
+    height: 32rem;
+    width: 32rem;
+    
+    display: flex;
+    flex-wrap: wrap;
+ 
+   
+}
+
+
+

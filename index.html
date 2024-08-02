@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Etch A Sketch</h1>
+    </header>
+    <main>
+        <nav>
+            <div id="current-color"></div>
+            <div>
+                
+                <label for="color-picker">Color</label>  
+                <input type="color" id="color-picker" value="#39b5c6" name="color-picker" />
+            </div>
+            <div>
+                <button id="color-button">Single Color</button>
+                <button id="rainbow-button">Rainbow</button>
+                <button id="Artistic">Artistic</button>
+                <button id="clear-button">Clear</button>
+            </div>
+           
+        </nav>  
+        <div>
+            <div>
+                <input type="range" min="10" max="100" value="16" name="grid-size"/>
+                <label for="grid-size">Grid Size</label>
+            </div>
+            <div id="drawing-board"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>All Right Reserved. &copy; djkier </p>
+        <p>icon github@github.com</p>
+    </footer>
+    
+</body>
+</html>
