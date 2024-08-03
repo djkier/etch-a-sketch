@@ -136,6 +136,8 @@ button:hover{
     box-shadow: none;
     font-size: 0.8rem;
     margin-top: 0;
+    background-color: #000;
+    color: white;
 }
 
 main div p {
