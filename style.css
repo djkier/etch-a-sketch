@@ -69,7 +69,8 @@ nav #current-color{
     height: 6.25rem;
     width: 6.25rem;
     border-radius: 50%; 
-    border: 6px solid #0000001a;
+    /* border: 6px solid #0000001a; */
+    outline: 6px solid rgba(0, 0, 0, 0.10);
 }
 
 #color-picker {
