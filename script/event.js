@@ -1,9 +1,9 @@
 //board
-import { colorPicked, btnClickEffectOff, btnClickEffectOn } from './colorButtons.js'
+import { colorPicked, btnClickEffectOff, btnClickEffectOn,drawingBoard } from './colorButtons.js'
 
 const gridSize = document.querySelector('#grid-size');
 const gridSizeNum = document.querySelector('#grid-size-number')
-const drawingBoard = document.querySelector("#drawing-board")
+
 
 
 const clearBtn = document.querySelector('#clear-button');
@@ -20,6 +20,7 @@ function windowLoad(divNum) {
         const newDiv = drawingBoard.appendChild(document.createElement("div"));
         newDiv.style.height = `${newDivSide}px`;
         newDiv.style.width = `${newDivSide}px`;
+
     } 
 }
 
