@@ -20,7 +20,7 @@ function windowLoad(divNum) {
         const newDiv = drawingBoard.appendChild(document.createElement("div"));
         newDiv.style.height = `${newDivSide}px`;
         newDiv.style.width = `${newDivSide}px`;
-
+       
     } 
 }
 
@@ -54,6 +54,7 @@ gridSize.addEventListener('change', (e) => {
 const mouseOverEvent = (e) => {
     if (e.target.id !== drawingBoard.id){
         e.target.style.backgroundColor = colorPicked; 
+        e.target.style.opacity = 1;
 
     }
 
