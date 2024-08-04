@@ -20,7 +20,7 @@ function windowLoad(divNum) {
         const newDiv = drawingBoard.appendChild(document.createElement("div"));
         newDiv.style.height = `${newDivSide}px`;
         newDiv.style.width = `${newDivSide}px`;
-        newDiv.className = i;
+
     } 
 }
 
