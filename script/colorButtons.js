@@ -8,19 +8,38 @@ const blackBtn = document.querySelector('#black-button');
 const eraserBtn = document.querySelector('#eraser-button');
 const drawingBoard = document.querySelector("#drawing-board");
 
-
-
 let activeColor = colorPicker.value;
+let colorPicked = colorPicker.value;
+
+let count = 0;
+let startingRandom = 0;
+let increasingCount = 0;
+
+
+
 
 
 const rainbowEffects = () => {
-    colorPicked = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
+    count++;
+    count === 360 ? count = 0 : count;
+    increasingCount = startingRandom + count;
+    colorPicked = `hsl(${(increasingCount%360)*2}, 80%, 40%)`
+    // colorPicked = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
    
 }
 
 const grayEffects = () => {
-    const randColor = Math.floor(Math.random()*255);
-    colorPicked = `rgb(${randColor}, ${randColor}, ${randColor})`;
+    startingRandom % 2 === 0 ? count++ : count--;
+    if (count > 220) {
+        count = 0;
+    }
+
+    if (count < 0) {
+        count = 220;
+    }
+
+    console.log(count)
+    colorPicked = `rgb(${count}, ${count}, ${count})`;
 }
 
 const button = {
@@ -57,7 +76,7 @@ const button = {
     }
 
 const keys = Object.keys(button);
-let colorPicked = button.colorChanger.color;
+
 
 colorCurrent.style.background = button.colorChanger.color;
 
@@ -103,6 +122,7 @@ function activateOff(elem){
 }
 
 function activated(btn){
+    startingRandom = Math.floor(Math.random()*360);
     for (let keyst of keys) {
         if (button[keyst].btn === btn) {
             if (!button[keyst].isActive) {
